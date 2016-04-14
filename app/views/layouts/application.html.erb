@@ -13,6 +13,7 @@
 
     <% if user_signed_in? %>
       <ul>
+        <li><%= link_to t('.new_project'), new_project_path %>
         <li><%= link_to t('.sign_out'), destroy_user_session_path, method: :delete %></li>
       </ul>
     <% else %>
@@ -20,7 +21,7 @@
         <li><%= link_to t('.sign_in'), new_user_session_path %></li>
       </ul>
     <% end %>
-    
+
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 

@@ -7,3 +7,8 @@ en:
     sessions:
       new:
         log_in: 'Log in'
+  projects:
+    form:
+      create_project: 'Create Project'
+  alerts:
+    you_dont_have_permission_to_access_this_feature: "You don't have permission to access this feature"
