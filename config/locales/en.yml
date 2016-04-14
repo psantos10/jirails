@@ -10,5 +10,9 @@ en:
   projects:
     form:
       create_project: 'Create Project'
+    settings:
+      add_user: 'Add user'
+    add_user:
+      add_user: 'Add user'
   alerts:
     you_dont_have_permission_to_access_this_feature: "You don't have permission to access this feature"

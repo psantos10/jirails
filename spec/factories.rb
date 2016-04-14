@@ -1,9 +1,12 @@
 # spec/factories.rb
 FactoryGirl.define do
+
   # Normal user
   factory :user do
     name "Jane Doe"
-    email "jane.doe@jirails.com"
+    sequence :email do |n|
+      "jane.doe#{n}@jirails.com"
+    end
     password "secure456"
     is_admin false
   end

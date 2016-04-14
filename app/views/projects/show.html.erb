@@ -1,2 +1,8 @@
 <h1><%= @project.name %></h1>
 <p>Visibility: <%= @project.is_private? ? t('.private') : t('.public') %></p>
+
+
+<ul>
+  <li><%= link_to t('.members'), project_members_path(@project.id) %></li>
+  <li><%= link_to t('.settings'), project_settings_path(@project.id) %></li>
+</ul>

@@ -19,6 +19,27 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
   end
 
+  def settings
+    @project = Project.find(params[:project_id])
+  end
+
+  def add_user
+    @project = Project.find(params[:project_id])
+  end
+
+  def save_user
+    project = Project.find(params[:project_id])
+    user = User.find(params[:user_id])
+
+    project.add_user(user)
+
+    redirect_to project
+  end
+
+  def members
+    @project = Project.find(params[:project_id])
+  end
+
 
   private
     def project_params
