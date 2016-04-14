@@ -2,6 +2,8 @@ en:
   layouts:
     application:
       sign_in: 'Sign in'
-  sessions:
-    new:
-      login: Login
+      sign_out: 'Sign out'
+  devise:
+    sessions:
+      new:
+        log_in: 'Log in'

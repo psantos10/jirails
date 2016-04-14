@@ -10,9 +10,26 @@
   </head>
 
   <body>
-    <ul>
-      <li><%= link_to t('.sign_in'), login_path %></li>
-    </ul>
+
+    <% if user_signed_in? %>
+      <ul>
+        <li><%= link_to t('.sign_out'), destroy_user_session_path, method: :delete %></li>
+      </ul>
+    <% else %>
+      <ul>
+        <li><%= link_to t('.sign_in'), new_user_session_path %></li>
+      </ul>
+    <% end %>
+    
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if user_signed_in? %>
+      Welcome back, <%= current_user.name %>!
+    <% end %>
+
     <%= yield %>
+
+    <p><%= params.inspect %></p>
   </body>
 </html>
